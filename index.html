@@ -210,6 +210,12 @@ body::after{content:'';position:fixed;inset:0;z-index:55;pointer-events:none;bac
 @keyframes lapfloat{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-20px) rotate(-1.4deg)}}
 .lap-shadow{position:absolute;left:16%;right:16%;bottom:0;height:9%;border-radius:50%;background:radial-gradient(ellipse at center,rgba(26,59,71,.42),rgba(26,59,71,0) 70%);filter:blur(7px);animation:lapsh 5.5s ease-in-out infinite}
 @keyframes lapsh{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(.8);opacity:.5}}
+/* nav uses the same font as the marquee (Archivo Black), kept small so the tagline still leads */
+#nav a[data-link],#nav #menu{font-family:'Archivo Black','Arial Black',Arial,sans-serif;text-transform:uppercase;font-weight:400;letter-spacing:.05em;font-size:.78rem}
+#nav #menu{font-size:.74rem}
+#nav>div>a:first-child{font-family:'Archivo Black','Arial Black',Arial,sans-serif;font-weight:400;font-size:1rem;letter-spacing:.02em}
+#links a[data-link]{font-size:.9rem}
+@media(min-width:768px){#links a[data-link]{font-size:.78rem}}
 /* marquee bar: teal blue with white text */
 #home>div.bg-yellow{background-color:#1A3B47!important;color:#fff!important;background-image:var(--grain),radial-gradient(rgba(255,255,255,.08) 1px,transparent 1.4px);background-size:180px 180px,7px 7px;background-blend-mode:soft-light,normal}
 /* hero fix: nowrap headline must not push the monogram off-screen */
