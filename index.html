@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior:smooth">
+<html lang="en" data-theme="light" style="scroll-behavior:smooth;color-scheme:light">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="only light">
+<meta name="supported-color-schemes" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ARTuro: Design with Art, Code with Heart</title>
 <meta name="description" content="ARTuro brand portfolio: concept, logo, first brand post and launch poster.">
@@ -163,6 +165,9 @@ body.lock{overflow:hidden}
  #dia svg .lbl{font-size:50px;font-weight:700}
  #diahint{display:none!important}
 }
+/* ALWAYS light: cream sections stay cream in dark mode, on every device */
+:root,:root:not([data-theme="light"]),:root[data-theme="dark"],:root[data-theme="light"]{--paper:#F6EEE7!important;--ink:#1A3B47!important;color-scheme:light only}
+html,body{background-color:#F6EEE7}
 /* hero fix: nowrap headline must not push the monogram off-screen */
 #home>div.relative.grid{grid-template-columns:minmax(0,1fr)}
 #home>div.relative.grid>*{min-width:0}
